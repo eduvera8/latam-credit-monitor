@@ -34,8 +34,8 @@
   
   <section class="section">
     <h2>Leitura do mês</h2>
-    <p>Primeira edição. O ciclo de crédito brasileiro entra no quarto trimestre de 2026 com a inadimplência de pessoa física em <strong>6,03%</strong>, o nível mais alto da série desde o aperto de 2016, enquanto a carteira de pessoa jurídica segue em <strong>3,35%</strong>. A divergência entre os dois segmentos é o fato central do momento e merece acompanhamento mês a mês.</p>
-  <p><em>Substitua este texto a cada edição. É a única parte da página escrita à mão — tudo abaixo se atualiza sozinho.</em></p>
+    <p><strong>Este texto é um rascunho e precisa ser reescrito antes de o link ser divulgado.</strong> Ele descreve os números, mas não arrisca uma leitura — e é a leitura que dá valor à página. Tudo abaixo desta seção se atualiza sozinho; só esta parte é escrita à mão.</p>
+  <p>A inadimplência brasileira fecha agosto de 2026 em 5,04%, com pessoa física em 6,03% contra 3,35% em pessoa jurídica. A série ajustada pelo efeito denominador está 0,46 p.p. acima da manchete, o que indica que o índice publicado ainda está sendo amaciado pelo crescimento recente da carteira. No Peru, a cartera atrasada dos bancos está em 2,82%, e o crédito departamental cresce a uma mediana de 9,9% em doze meses, com dispersão larga entre regiões.</p>
   </section>
 
   <div class="tiles viz-root">
@@ -44,6 +44,12 @@
         <p class="tile-value">5,04<span
           style="font-size:.55em;font-weight:600;color:var(--ink-soft)"> %</span></p>
         <p class="tile-delta">+0,90 p.p. em 12 meses</p>
+      </div>
+      <div class="tile">
+        <p class="tile-label">Hiato manchete–ajustada</p>
+        <p class="tile-value">0,46<span
+          style="font-size:.55em;font-weight:600;color:var(--ink-soft)"> %</span></p>
+        <p class="tile-delta">+0,03 p.p. em 12 meses</p>
       </div>
       <div class="tile">
         <p class="tile-label">Crédito total · var. 12m</p>
@@ -57,11 +63,24 @@
           style="font-size:.55em;font-weight:600;color:var(--ink-soft)"> % a.a.</span></p>
         <p class="tile-delta">+0,4 % a.a. em 12 meses</p>
       </div>
+      <div class="tile">
+        <p class="tile-label">Cartera atrasada · Peru</p>
+        <p class="tile-value">2,82<span
+          style="font-size:.55em;font-weight:600;color:var(--ink-soft)"> %</span></p>
+        <p class="tile-delta">−0,65 p.p. em 12 meses</p>
+      </div>
+      <div class="tile">
+        <p class="tile-label">Mediana departamental · Peru</p>
+        <p class="tile-value">9,9<span
+          style="font-size:.55em;font-weight:600;color:var(--ink-soft)"> %</span></p>
+        <p class="tile-delta">+7,8 p.p. em 12 meses</p>
+      </div>
   </div>
 
   <section class="block viz-root">
     <h2>Inadimplência da carteira de crédito</h2>
     <p class="block-sub">Atrasos acima de 90 dias, em % do saldo. Sistema Financeiro Nacional.</p>
+    
     <ul class="legend"><li><span class="swatch" style="background:var(--series-1)"></span>Total</li><li><span class="swatch" style="background:var(--series-2)"></span>Pessoa jurídica</li><li><span class="swatch" style="background:var(--series-3)"></span>Pessoa física</li></ul>
     <div class="chart-wrap">
       <div class="chart-scroll">
@@ -110,8 +129,52 @@
     <details class="table-view"><summary>Ver os números (últimos 13 meses)</summary><table><thead><tr><th>Mês</th><th>Total</th><th>Pessoa jurídica</th><th>Pessoa física</th></tr></thead><tbody><tr><td>ago/2026</td><td>5,04</td><td>3,35</td><td>6,03</td></tr><tr><td>jul/2026</td><td>4,88</td><td>3,32</td><td>5,80</td></tr><tr><td>jun/2026</td><td>4,58</td><td>3,18</td><td>5,42</td></tr><tr><td>mai/2026</td><td>4,75</td><td>3,25</td><td>5,63</td></tr><tr><td>abr/2026</td><td>4,64</td><td>3,15</td><td>5,51</td></tr><tr><td>mar/2026</td><td>4,52</td><td>3,06</td><td>5,39</td></tr><tr><td>fev/2026</td><td>4,64</td><td>3,07</td><td>5,56</td></tr><tr><td>jan/2026</td><td>4,44</td><td>2,87</td><td>5,38</td></tr><tr><td>dez/2025</td><td>4,20</td><td>2,70</td><td>5,12</td></tr><tr><td>nov/2025</td><td>4,24</td><td>2,75</td><td>5,12</td></tr><tr><td>out/2025</td><td>4,18</td><td>2,82</td><td>4,99</td></tr><tr><td>set/2025</td><td>4,09</td><td>2,77</td><td>4,89</td></tr><tr><td>ago/2025</td><td>4,14</td><td>2,85</td><td>4,92</td></tr></tbody></table></details>
   </section>
   <section class="block viz-root">
+    <h2>Inadimplência ajustada pelo efeito denominador</h2>
+    <p class="block-sub">Carteira problemática sobre o saldo de doze meses antes, contra o índice publicado. Quando a carteira cresce rápido, a manchete subestima.</p>
+    
+    <ul class="legend"><li><span class="swatch" style="background:var(--series-1)"></span>Manchete</li><li><span class="swatch" style="background:var(--series-2)"></span>Ajustada</li></ul>
+    <div class="chart-wrap">
+      <div class="chart-scroll">
+        <svg class="chart" id="chart-ajustada" viewBox="0 0 760 300" role="img" preserveAspectRatio="xMidYMid meet" data-series='[{"label": "Manchete", "slot": 1, "values": [3.66, 3.71, 3.67, 3.76, 3.76, 3.71, 3.72, 3.75, 3.72, 3.76, 3.67, 3.55, 3.55, 3.53, 3.46, 3.48, 3.48, 3.26, 3.22, 3.14, 3.15, 3.07, 2.98, 2.87, 2.86, 2.88, 2.91, 2.95, 3.02, 2.93, 2.98, 3.01, 2.94, 2.99, 2.88, 2.76, 2.85, 2.89, 2.85, 2.99, 3.06, 2.96, 3.07, 3.16, 3.16, 3.28, 3.42, 3.42, 3.52, 3.55, 3.58, 3.71, 3.79, 3.57, 3.61, 3.69, 3.74, 3.9, 3.86, 3.75, 3.79, 3.82, 3.91, 4.0, 4.11, 3.8, 3.75, 3.76, 3.66, 3.69, 3.6, 3.29, 3.48, 3.49, 3.35, 3.38, 3.37, 3.11, 3.08, 3.1, 3.11, 3.11, 3.02, 2.93, 3.01, 2.96, 3.04, 3.07, 3.1, 2.99, 3.1, 3.1, 3.11, 3.09, 3.06, 2.99, 3.06, 3.1, 3.24, 3.36, 3.31, 2.95, 2.82, 2.7, 2.47, 2.4, 2.27, 2.16, 2.19, 2.28, 2.18, 2.24, 2.39, 2.32, 2.36, 2.37, 2.34, 2.33, 2.36, 2.35, 2.51, 2.57, 2.66, 2.72, 2.79, 2.73, 2.84, 2.9, 2.92, 3.04, 3.07, 3.07, 3.24, 3.36, 3.35, 3.54, 3.65, 3.61, 3.63, 3.61, 3.54, 3.56, 3.53, 3.29, 3.38, 3.38, 3.33, 3.37, 3.43, 3.29, 3.3, 3.33, 3.34, 3.3, 3.27, 3.08, 3.34, 3.41, 3.44, 3.67, 3.72, 3.75, 3.96, 4.14, 4.09, 4.18, 4.24, 4.2, 4.44, 4.64, 4.52, 4.64, 4.75, 4.58, 4.88, 5.04]}, {"label": "Ajustada", "slot": 2, "values": [null, null, null, null, null, null, null, null, null, null, null, null, 4.136983525847377, 4.128011097283737, 4.044818010574762, 4.051442006849949, 4.046395298733323, 3.7993608764513462, 3.7422980471414866, 3.6513360175794403, 3.6499316320884088, 3.517118450844929, 3.417948288090786, 3.2849672512960573, 3.2765127648017383, 3.288910675299113, 3.2955748952287687, 3.333523744323144, 3.3926607130453847, 3.2647830716049304, 3.3100704548094155, 3.332281365418721, 3.2744593648380373, 3.3474713236063867, 3.212871725836538, 3.0724154271976496, 3.172649255257187, 3.216611843951726, 3.1798639251624725, 3.312614158385796, 3.3808565200749237, 3.2579608575622245, 3.3814897151758996, 3.4753366513294206, 3.4615776009390484, 3.556450057114282, 3.684507445241255, 3.659040752064379, 3.7358518040008892, 3.734201701003844, 3.6951723780848793, 3.8057475795254576, 3.8694771225762046, 3.6044312068691005, 3.6185187792425952, 3.6685251600102324, 3.678805389877356, 3.824832499278191, 3.7731222205828336, 3.6202002149585106, 3.645924397221724, 3.6894965329135063, 3.811150240451733, 3.913486404185409, 4.00480386596795, 3.7384551032501006, 3.6750505126453588, 3.684300204215983, 3.5905506384353054, 3.644962575419275, 3.559339245558605, 3.2758119950718374, 3.4706737099572753, 3.4764980604334923, 3.3506137187387326, 3.399800745613807, 3.411222705435746, 3.156485730411921, 3.1471700052367173, 3.20106887457234, 3.2268259235852894, 3.216937113577202, 3.1495607913324375, 3.081059320299845, 3.1653178598973035, 3.130154725673309, 3.219197253674001, 3.2406846467540342, 3.2772303447212505, 3.149502281211116, 3.2647192604480755, 3.2679947089177257, 3.2977290074293433, 3.292615956555086, 3.262527190501701, 3.1846837177304814, 3.2771329795618134, 3.327149830381514, 3.5479703151539526, 3.680657875152015, 3.6168977877738393, 3.2375827805542934, 3.1405815376951285, 3.031948713363474, 2.802070309357492, 2.754446221784642, 2.6246444796943194, 2.4990043431528024, 2.5396727984845913, 2.6471996618260305, 2.498576621344094, 2.5796148225195963, 2.7761404831799634, 2.6981965689752765, 2.746436914312521, 2.752116544689261, 2.7193625137707347, 2.7099072334598815, 2.741321919450468, 2.736580681082616, 2.9245215262663597, 3.003236012655099, 3.1053883357443035, 3.1853914619329062, 3.2656533093621634, 3.216909726407993, 3.3235724818082963, 3.384873172482663, 3.3958461681185734, 3.5143537747265268, 3.5295143628927583, 3.517905718566378, 3.718236085235548, 3.8170657161506645, 3.790343571067599, 3.9739743080501775, 4.071265679591982, 3.98357399695465, 3.982618517919909, 3.956112900971492, 3.856091562555968, 3.8588180728874093, 3.814132016133472, 3.5592100157489592, 3.6451270492558385, 3.6600460849570373, 3.6215346230495404, 3.673836194671625, 3.7446234378518253, 3.6277020085377045, 3.6515674662175286, 3.675177334741484, 3.6906161578188192, 3.662644026822276, 3.644796162842799, 3.4298769456192137, 3.726358112670752, 3.8177784831173005, 3.8345805901342804, 4.109497590920724, 4.165057816982311, 4.160734962755082, 4.393245514033552, 4.571279999765292, 4.508555812826709, 4.6121599772562005, 4.665308162979977, 4.637015302720879, 4.897216538984591, 5.1005757125454805, 4.976430744546005, 5.085383254820237, 5.205338369020115, 5.023838931044118, 5.335947302393257, 5.503668757074389]}]' data-dates='["2012-01", "2012-02", "2012-03", "2012-04", "2012-05", "2012-06", "2012-07", "2012-08", "2012-09", "2012-10", "2012-11", "2012-12", "2013-01", "2013-02", "2013-03", "2013-04", "2013-05", "2013-06", "2013-07", "2013-08", "2013-09", "2013-10", "2013-11", "2013-12", "2014-01", "2014-02", "2014-03", "2014-04", "2014-05", "2014-06", "2014-07", "2014-08", "2014-09", "2014-10", "2014-11", "2014-12", "2015-01", "2015-02", "2015-03", "2015-04", "2015-05", "2015-06", "2015-07", "2015-08", "2015-09", "2015-10", "2015-11", "2015-12", "2016-01", "2016-02", "2016-03", "2016-04", "2016-05", "2016-06", "2016-07", "2016-08", "2016-09", "2016-10", "2016-11", "2016-12", "2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12", "2018-01", "2018-02", "2018-03", "2018-04", "2018-05", "2018-06", "2018-07", "2018-08", "2018-09", "2018-10", "2018-11", "2018-12", "2019-01", "2019-02", "2019-03", "2019-04", "2019-05", "2019-06", "2019-07", "2019-08", "2019-09", "2019-10", "2019-11", "2019-12", "2020-01", "2020-02", "2020-03", "2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09", "2020-10", "2020-11", "2020-12", "2021-01", "2021-02", "2021-03", "2021-04", "2021-05", "2021-06", "2021-07", "2021-08", "2021-09", "2021-10", "2021-11", "2021-12", "2022-01", "2022-02", "2022-03", "2022-04", "2022-05", "2022-06", "2022-07", "2022-08", "2022-09", "2022-10", "2022-11", "2022-12", "2023-01", "2023-02", "2023-03", "2023-04", "2023-05", "2023-06", "2023-07", "2023-08", "2023-09", "2023-10", "2023-11", "2023-12", "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08"]' data-unit="%" data-decimals="2" data-ylo="2" data-yhi="6">
+<line class="grid" x1="44" y1="274.0" x2="642" y2="274.0"/>
+<text class="tick" x="36" y="277.0" text-anchor="end">2</text>
+<line class="grid" x1="44" y1="208.0" x2="642" y2="208.0"/>
+<text class="tick" x="36" y="211.0" text-anchor="end">3</text>
+<line class="grid" x1="44" y1="142.0" x2="642" y2="142.0"/>
+<text class="tick" x="36" y="145.0" text-anchor="end">4</text>
+<line class="grid" x1="44" y1="76.0" x2="642" y2="76.0"/>
+<text class="tick" x="36" y="79.0" text-anchor="end">5</text>
+<line class="grid" x1="44" y1="10.0" x2="642" y2="10.0"/>
+<text class="tick" x="36" y="13.0" text-anchor="end">6</text>
+<text class="tick" x="44.0" y="291" text-anchor="middle">2012</text>
+<text class="tick" x="126.0" y="291" text-anchor="middle">2014</text>
+<text class="tick" x="208.0" y="291" text-anchor="middle">2016</text>
+<text class="tick" x="290.0" y="291" text-anchor="middle">2018</text>
+<text class="tick" x="372.0" y="291" text-anchor="middle">2020</text>
+<text class="tick" x="454.1" y="291" text-anchor="middle">2022</text>
+<text class="tick" x="536.1" y="291" text-anchor="middle">2024</text>
+<text class="tick" x="618.1" y="291" text-anchor="middle">2026</text>
+<polyline class="series" style="stroke:var(--series-1)" points="44.0,164.4 47.4,161.1 50.8,163.8 54.3,157.8 57.7,157.8 61.1,161.1 64.5,160.5 67.9,158.5 71.3,160.5 74.8,157.8 78.2,163.8 81.6,171.7 85.0,171.7 88.4,173.0 91.8,177.6 95.3,176.3 98.7,176.3 102.1,190.8 105.5,193.5 108.9,198.8 112.3,198.1 115.8,203.4 119.2,209.3 122.6,216.6 126.0,217.2 129.4,215.9 132.8,213.9 136.3,211.3 139.7,206.7 143.1,212.6 146.5,209.3 149.9,207.3 153.3,212.0 156.8,208.7 160.2,215.9 163.6,223.8 167.0,217.9 170.4,215.3 173.9,217.9 177.3,208.7 180.7,204.0 184.1,210.6 187.5,203.4 190.9,197.4 194.4,197.4 197.8,189.5 201.2,180.3 204.6,180.3 208.0,173.7 211.4,171.7 214.9,169.7 218.3,161.1 221.7,155.9 225.1,170.4 228.5,167.7 231.9,162.5 235.4,159.2 238.8,148.6 242.2,151.2 245.6,158.5 249.0,155.9 252.4,153.9 255.9,147.9 259.3,142.0 262.7,134.7 266.1,155.2 269.5,158.5 272.9,157.8 276.4,164.4 279.8,162.5 283.2,168.4 286.6,188.9 290.0,176.3 293.5,175.7 296.9,184.9 300.3,182.9 303.7,183.6 307.1,200.7 310.5,202.7 314.0,201.4 317.4,200.7 320.8,200.7 324.2,206.7 327.6,212.6 331.0,207.3 334.5,210.6 337.9,205.4 341.3,203.4 344.7,201.4 348.1,208.7 351.5,201.4 355.0,201.4 358.4,200.7 361.8,202.1 365.2,204.0 368.6,208.7 372.0,204.0 375.5,201.4 378.9,192.2 382.3,184.2 385.7,187.5 389.1,211.3 392.5,219.9 396.0,227.8 399.4,243.0 402.8,247.6 406.2,256.2 409.6,263.4 413.1,261.5 416.5,255.5 419.9,262.1 423.3,258.2 426.7,248.3 430.1,252.9 433.6,250.2 437.0,249.6 440.4,251.6 443.8,252.2 447.2,250.2 450.6,250.9 454.1,240.3 457.5,236.4 460.9,230.4 464.3,226.5 467.7,221.9 471.1,225.8 474.6,218.6 478.0,214.6 481.4,213.3 484.8,205.4 488.2,203.4 491.6,203.4 495.1,192.2 498.5,184.2 501.9,184.9 505.3,172.4 508.7,165.1 512.1,167.7 515.6,166.4 519.0,167.7 522.4,172.4 525.8,171.0 529.2,173.0 532.7,188.9 536.1,182.9 539.5,182.9 542.9,186.2 546.3,183.6 549.7,179.6 553.2,188.9 556.6,188.2 560.0,186.2 563.4,185.6 566.8,188.2 570.2,190.2 573.7,202.7 577.1,185.6 580.5,180.9 583.9,179.0 587.3,163.8 590.7,160.5 594.2,158.5 597.6,144.6 601.0,132.8 604.4,136.1 607.8,130.1 611.2,126.2 614.7,128.8 618.1,113.0 621.5,99.8 624.9,107.7 628.3,99.8 631.7,92.5 635.2,103.7 638.6,83.9 642.0,73.4"/>
+<polyline class="series" style="stroke:var(--series-2)" points="85.0,133.0 88.4,133.6 91.8,139.0 95.3,138.6 98.7,138.9 102.1,155.2 105.5,159.0 108.9,165.0 112.3,165.1 115.8,173.9 119.2,180.4 122.6,189.2 126.0,189.8 129.4,188.9 132.8,188.5 136.3,186.0 139.7,182.1 143.1,190.5 146.5,187.5 149.9,186.1 153.3,189.9 156.8,185.1 160.2,194.0 163.6,203.2 167.0,196.6 170.4,193.7 173.9,196.1 177.3,187.4 180.7,182.9 184.1,191.0 187.5,182.8 190.9,176.6 194.4,177.5 197.8,171.3 201.2,162.8 204.6,164.5 208.0,159.4 211.4,159.5 214.9,162.1 218.3,154.8 221.7,150.6 225.1,168.1 228.5,167.2 231.9,163.9 235.4,163.2 238.8,153.6 242.2,157.0 245.6,167.1 249.0,165.4 252.4,162.5 255.9,154.5 259.3,147.7 262.7,141.7 266.1,159.3 269.5,163.4 272.9,162.8 276.4,169.0 279.8,165.4 283.2,171.1 286.6,189.8 290.0,176.9 293.5,176.6 296.9,184.9 300.3,181.6 303.7,180.9 307.1,197.7 310.5,198.3 314.0,194.7 317.4,193.0 320.8,193.7 324.2,198.1 327.6,202.7 331.0,197.1 334.5,199.4 337.9,193.5 341.3,192.1 344.7,189.7 348.1,198.1 351.5,190.5 355.0,190.3 358.4,188.3 361.8,188.7 365.2,190.7 368.6,195.8 372.0,189.7 375.5,186.4 378.9,171.8 382.3,163.1 385.7,167.3 389.1,192.3 392.5,198.7 396.0,205.9 399.4,221.1 402.8,224.2 406.2,232.8 409.6,241.1 413.1,238.4 416.5,231.3 419.9,241.1 423.3,235.7 426.7,222.8 430.1,227.9 433.6,224.7 437.0,224.4 440.4,226.5 443.8,227.1 447.2,225.1 450.6,225.4 454.1,213.0 457.5,207.8 460.9,201.0 464.3,195.8 467.7,190.5 471.1,193.7 474.6,186.6 478.0,182.6 481.4,181.9 484.8,174.1 488.2,173.1 491.6,173.8 495.1,160.6 498.5,154.1 501.9,155.8 505.3,143.7 508.7,137.3 512.1,143.1 515.6,143.1 519.0,144.9 522.4,151.5 525.8,151.3 529.2,154.3 532.7,171.1 536.1,165.4 539.5,164.4 542.9,167.0 546.3,163.5 549.7,158.9 553.2,166.6 556.6,165.0 560.0,163.4 563.4,162.4 566.8,164.3 570.2,165.4 573.7,179.6 577.1,160.1 580.5,154.0 583.9,152.9 587.3,134.8 590.7,131.1 594.2,131.4 597.6,116.0 601.0,104.3 604.4,108.4 607.8,101.6 611.2,98.1 614.7,100.0 618.1,82.8 621.5,69.4 624.9,77.6 628.3,70.4 631.7,62.4 635.2,74.4 638.6,53.8 642.0,42.8"/>
+<circle class="dot-ring" cx="642.0" cy="73.4" r="4"/>
+<circle class="dot" cx="642.0" cy="73.4" r="4" style="fill:var(--series-1)"/>
+<text class="endlabel" x="655.0" y="76.4">Manchete <tspan class="endvalue">5,04</tspan></text>
+<circle class="dot-ring" cx="642.0" cy="42.8" r="4"/>
+<circle class="dot" cx="642.0" cy="42.8" r="4" style="fill:var(--series-2)"/>
+<text class="endlabel" x="655.0" y="45.8">Ajustada <tspan class="endvalue">5,50</tspan></text>
+<line class="crosshair" x1="0" y1="10" x2="0" y2="274" hidden/>
+<g class="hoverdots"></g>
+<rect class="hitbox" x="44" y="10" width="598" height="264"/>
+</svg>
+      </div>
+      <div class="tooltip" data-open="0"></div>
+    </div>
+    <details class="table-view"><summary>Ver os números (últimos 13 meses)</summary><table><thead><tr><th>Mês</th><th>Manchete</th><th>Ajustada</th></tr></thead><tbody><tr><td>ago/2026</td><td>5,04</td><td>5,50</td></tr><tr><td>jul/2026</td><td>4,88</td><td>5,34</td></tr><tr><td>jun/2026</td><td>4,58</td><td>5,02</td></tr><tr><td>mai/2026</td><td>4,75</td><td>5,21</td></tr><tr><td>abr/2026</td><td>4,64</td><td>5,09</td></tr><tr><td>mar/2026</td><td>4,52</td><td>4,98</td></tr><tr><td>fev/2026</td><td>4,64</td><td>5,10</td></tr><tr><td>jan/2026</td><td>4,44</td><td>4,90</td></tr><tr><td>dez/2025</td><td>4,20</td><td>4,64</td></tr><tr><td>nov/2025</td><td>4,24</td><td>4,67</td></tr><tr><td>out/2025</td><td>4,18</td><td>4,61</td></tr><tr><td>set/2025</td><td>4,09</td><td>4,51</td></tr><tr><td>ago/2025</td><td>4,14</td><td>4,57</td></tr></tbody></table></details>
+  </section>
+  <section class="block viz-root">
     <h2>Crescimento do saldo de crédito</h2>
     <p class="block-sub">Variação nominal sobre doze meses do saldo da carteira. Não deflacionado.</p>
+    
     <ul class="legend"><li><span class="swatch" style="background:var(--series-1)"></span>Total</li><li><span class="swatch" style="background:var(--series-2)"></span>Pessoa jurídica</li><li><span class="swatch" style="background:var(--series-3)"></span>Pessoa física</li></ul>
     <div class="chart-wrap">
       <div class="chart-scroll">
@@ -161,6 +224,7 @@
   <section class="block viz-root">
     <h2>Taxa média de juros das concessões</h2>
     <p class="block-sub">Taxa média de juros das operações de crédito, % ao ano.</p>
+    
     <ul class="legend"><li><span class="swatch" style="background:var(--series-1)"></span>Total</li><li><span class="swatch" style="background:var(--series-2)"></span>Pessoa jurídica</li><li><span class="swatch" style="background:var(--series-3)"></span>Pessoa física</li></ul>
     <div class="chart-wrap">
       <div class="chart-scroll">
@@ -206,10 +270,223 @@
     </div>
     <details class="table-view"><summary>Ver os números (últimos 13 meses)</summary><table><thead><tr><th>Mês</th><th>Total</th><th>Pessoa jurídica</th><th>Pessoa física</th></tr></thead><tbody><tr><td>ago/2026</td><td>32,3</td><td>19,8</td><td>38,2</td></tr><tr><td>jul/2026</td><td>32,1</td><td>20,8</td><td>37,5</td></tr><tr><td>jun/2026</td><td>32,6</td><td>20,7</td><td>38,3</td></tr><tr><td>mai/2026</td><td>33,0</td><td>21,2</td><td>38,6</td></tr><tr><td>abr/2026</td><td>33,4</td><td>21,7</td><td>38,9</td></tr><tr><td>mar/2026</td><td>32,8</td><td>21,1</td><td>38,5</td></tr><tr><td>fev/2026</td><td>32,6</td><td>20,8</td><td>38,3</td></tr><tr><td>jan/2026</td><td>32,5</td><td>21,0</td><td>38,0</td></tr><tr><td>dez/2025</td><td>31,9</td><td>19,9</td><td>37,7</td></tr><tr><td>nov/2025</td><td>32,2</td><td>20,4</td><td>37,9</td></tr><tr><td>out/2025</td><td>32,0</td><td>21,7</td><td>36,8</td></tr><tr><td>set/2025</td><td>31,5</td><td>20,6</td><td>36,5</td></tr><tr><td>ago/2025</td><td>31,9</td><td>21,5</td><td>36,6</td></tr></tbody></table></details>
   </section>
+  <section class="block viz-root">
+    <h2>Cartera atrasada do sistema bancário peruano</h2>
+    <p class="block-sub">Cartera atrasada neta sobre colocaciones netas, em %. Empresas bancarias. É o equivalente peruano da inadimplência, com definição regulatória própria — não é diretamente comparável ao número brasileiro.</p>
+    <p class="caveat">Dois avisos sobre esta série. Ela tem uma quebra de definição em janeiro de 2018 — até dezembro de 2017 é líquida de provisões e chega a ser negativa, saltando de −0,24% para 3,15% de um mês para o outro — por isso o gráfico começa em 2018. E a fonte não publica o mês de setembro em nenhum ano: os cortes na linha são esses buracos, não interrupções do indicador.</p>
+    
+    <div class="chart-wrap">
+      <div class="chart-scroll">
+        <svg class="chart" id="chart-atrasada" viewBox="0 0 760 300" role="img" preserveAspectRatio="xMidYMid meet" data-series='[{"label": "Bancos", "slot": 1, "values": [3.14519066002727, 3.26151150084781, 3.0878420925932, 3.1271182026806, 3.15582794824177, 3.11917352455379, 3.19897849603831, 3.2376456401199, null, 3.10904125590263, 3.08450276553666, 2.9597065723084, 3.04847506876505, 3.05667140624593, 2.99999966105989, 3.06012323322907, 3.11784638591579, 3.09426522474517, 3.1360073883821, 3.13760601121313, null, 3.09241656788387, 3.05944824397228, 3.02762252360114, 3.1038717695207, 3.10114400351148, 3.15994706174897, 3.39566323634592, 3.08616708629, 3.15991786341011, 3.03434570860496, 3.11567558145237, null, 3.52927265934593, 3.71091305823549, 3.8102825407184, 3.84839322182932, 3.85778813967527, 3.76742346752542, 3.63905854376485, 3.58448734961418, 3.62268563558908, 3.67943201418543, 3.71881460958484, null, 3.85965465068903, 3.85987329263257, 3.78588222582932, 3.89129160010795, 3.84427100573334, 3.82065158095381, 3.78426439506345, 3.82256240043624, 3.84811793886159, 3.8, 3.95512176814741, null, 4.04790360790565, 4.019187376436, 3.96240438650947, 4.02915752781957, 4.03300480330492, 3.97439828974475, 4.0317913236286, 4.06383101858679, 4.08191257918422, 4.20932309677453, 4.27025914007572, null, 4.39974390699792, 4.39836994474117, 4.3281923504803, 4.43826726310807, 4.44426032488222, 4.48099888361583, 4.47371720708184, 4.57, 4.49, 4.447350688963, 4.22853287008822, null, 4.07775268926764, 3.96, 3.8, 3.78, 3.69, 3.73, 3.66, 3.62, 3.51, 3.53, 3.47, null, 3.4, 3.27, 3.27, 3.2, 3.12, 3.0, 2.9, 2.84, 2.85, 2.86, 2.82]}]' data-dates='["2018-01", "2018-02", "2018-03", "2018-04", "2018-05", "2018-06", "2018-07", "2018-08", "2018-09", "2018-10", "2018-11", "2018-12", "2019-01", "2019-02", "2019-03", "2019-04", "2019-05", "2019-06", "2019-07", "2019-08", "2019-09", "2019-10", "2019-11", "2019-12", "2020-01", "2020-02", "2020-03", "2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09", "2020-10", "2020-11", "2020-12", "2021-01", "2021-02", "2021-03", "2021-04", "2021-05", "2021-06", "2021-07", "2021-08", "2021-09", "2021-10", "2021-11", "2021-12", "2022-01", "2022-02", "2022-03", "2022-04", "2022-05", "2022-06", "2022-07", "2022-08", "2022-09", "2022-10", "2022-11", "2022-12", "2023-01", "2023-02", "2023-03", "2023-04", "2023-05", "2023-06", "2023-07", "2023-08", "2023-09", "2023-10", "2023-11", "2023-12", "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08"]' data-unit="%" data-decimals="2" data-ylo="2.5" data-yhi="5.0">
+<line class="grid" x1="44" y1="274.0" x2="642" y2="274.0"/>
+<text class="tick" x="36" y="277.0" text-anchor="end">2,5</text>
+<line class="grid" x1="44" y1="221.2" x2="642" y2="221.2"/>
+<text class="tick" x="36" y="224.2" text-anchor="end">3,0</text>
+<line class="grid" x1="44" y1="168.4" x2="642" y2="168.4"/>
+<text class="tick" x="36" y="171.4" text-anchor="end">3,5</text>
+<line class="grid" x1="44" y1="115.6" x2="642" y2="115.6"/>
+<text class="tick" x="36" y="118.6" text-anchor="end">4,0</text>
+<line class="grid" x1="44" y1="62.8" x2="642" y2="62.8"/>
+<text class="tick" x="36" y="65.8" text-anchor="end">4,5</text>
+<line class="grid" x1="44" y1="10.0" x2="642" y2="10.0"/>
+<text class="tick" x="36" y="13.0" text-anchor="end">5,0</text>
+<text class="tick" x="44.0" y="291" text-anchor="middle">2018</text>
+<text class="tick" x="113.7" y="291" text-anchor="middle">2019</text>
+<text class="tick" x="183.3" y="291" text-anchor="middle">2020</text>
+<text class="tick" x="253.0" y="291" text-anchor="middle">2021</text>
+<text class="tick" x="322.7" y="291" text-anchor="middle">2022</text>
+<text class="tick" x="392.3" y="291" text-anchor="middle">2023</text>
+<text class="tick" x="462.0" y="291" text-anchor="middle">2024</text>
+<text class="tick" x="531.7" y="291" text-anchor="middle">2025</text>
+<text class="tick" x="601.4" y="291" text-anchor="middle">2026</text>
+<polyline class="series" style="stroke:var(--series-1)" points="44.0,205.9 49.8,193.6 55.6,211.9 61.4,207.8 67.2,204.7 73.0,208.6 78.8,200.2 84.6,196.1"/>
+<polyline class="series" style="stroke:var(--series-1)" points="96.3,209.7 102.1,212.3 107.9,225.5 113.7,216.1 119.5,215.2 125.3,221.2 131.1,214.9 136.9,208.8 142.7,211.2 148.5,206.8 154.3,206.7"/>
+<polyline class="series" style="stroke:var(--series-1)" points="165.9,211.4 171.7,214.9 177.5,218.3 183.3,210.2 189.1,210.5 195.0,204.3 200.8,179.4 206.6,212.1 212.4,204.3 218.2,217.6 224.0,209.0"/>
+<polyline class="series" style="stroke:var(--series-1)" points="235.6,165.3 241.4,146.1 247.2,135.6 253.0,131.6 258.8,130.6 264.6,140.2 270.4,153.7 276.2,159.5 282.0,155.4 287.8,149.5 293.7,145.3"/>
+<polyline class="series" style="stroke:var(--series-1)" points="305.3,130.4 311.1,130.4 316.9,138.2 322.7,127.1 328.5,132.0 334.3,134.5 340.1,138.4 345.9,134.3 351.7,131.6 357.5,136.7 363.3,120.3"/>
+<polyline class="series" style="stroke:var(--series-1)" points="374.9,110.5 380.7,113.6 386.5,119.6 392.3,112.5 398.2,112.1 404.0,118.3 409.8,112.2 415.6,108.9 421.4,107.0 427.2,93.5 433.0,87.1"/>
+<polyline class="series" style="stroke:var(--series-1)" points="444.6,73.4 450.4,73.5 456.2,80.9 462.0,69.3 467.8,68.7 473.6,64.8 479.4,65.6 485.2,55.4 491.0,63.9 496.9,68.4 502.7,91.5"/>
+<polyline class="series" style="stroke:var(--series-1)" points="514.3,107.4 520.1,119.8 525.9,136.7 531.7,138.8 537.5,148.3 543.3,144.1 549.1,151.5 554.9,155.7 560.7,167.3 566.5,165.2 572.3,171.6"/>
+<polyline class="series" style="stroke:var(--series-1)" points="583.9,179.0 589.7,192.7 595.6,192.7 601.4,200.1 607.2,208.5 613.0,221.2 618.8,231.8 624.6,238.1 630.4,237.0 636.2,236.0 642.0,240.2"/>
+<circle class="dot-ring" cx="642.0" cy="240.2" r="4"/>
+<circle class="dot" cx="642.0" cy="240.2" r="4" style="fill:var(--series-1)"/>
+<text class="endlabel" x="655.0" y="243.2">Bancos <tspan class="endvalue">2,82</tspan></text>
+<line class="crosshair" x1="0" y1="10" x2="0" y2="274" hidden/>
+<g class="hoverdots"></g>
+<rect class="hitbox" x="44" y="10" width="598" height="264"/>
+</svg>
+      </div>
+      <div class="tooltip" data-open="0"></div>
+    </div>
+    <details class="table-view"><summary>Ver os números (últimos 13 meses)</summary><table><thead><tr><th>Mês</th><th>Bancos</th></tr></thead><tbody><tr><td>ago/2026</td><td>2,82</td></tr><tr><td>jul/2026</td><td>2,86</td></tr><tr><td>jun/2026</td><td>2,85</td></tr><tr><td>mai/2026</td><td>2,84</td></tr><tr><td>abr/2026</td><td>2,90</td></tr><tr><td>mar/2026</td><td>3,00</td></tr><tr><td>fev/2026</td><td>3,12</td></tr><tr><td>jan/2026</td><td>3,20</td></tr><tr><td>dez/2025</td><td>3,27</td></tr><tr><td>nov/2025</td><td>3,27</td></tr><tr><td>out/2025</td><td>3,40</td></tr><tr><td>set/2025</td><td>—</td></tr><tr><td>ago/2025</td><td>3,47</td></tr></tbody></table></details>
+  </section>
+  <section class="block viz-root">
+    <h2>Crédito por departamento, variação de 12 meses</h2>
+    <p class="block-sub">Crédito directo do sistema financeiro ao setor privado, por departamento, em soles correntes. É o grão que quase ninguém acompanha mês a mês: o ciclo de crédito peruano é muito desigual entre regiões.
+    Dados de junho de 2026.</p>
+    <div class="chart-wrap">
+      <div class="chart-scroll">
+        <svg class="chart chart-bars" id="chart-departamentos" viewBox="0 0 760 409" role="img" preserveAspectRatio="xMidYMid meet" data-unit="%" data-decimals="1">
+<line class="grid" x1="104.0" y1="8" x2="104.0" y2="383.0"/>
+<text class="tick" x="104.0" y="401" text-anchor="middle">0</text>
+<line class="grid" x1="254.5" y1="8" x2="254.5" y2="383.0"/>
+<text class="tick" x="254.5" y="401" text-anchor="middle">5</text>
+<line class="grid" x1="405.0" y1="8" x2="405.0" y2="383.0"/>
+<text class="tick" x="405.0" y="401" text-anchor="middle">10</text>
+<line class="grid" x1="555.5" y1="8" x2="555.5" y2="383.0"/>
+<text class="tick" x="555.5" y="401" text-anchor="middle">15</text>
+<line class="grid" x1="706.0" y1="8" x2="706.0" y2="383.0"/>
+<text class="tick" x="706.0" y="401" text-anchor="middle">20</text>
+<text class="cat" x="96" y="18.7" text-anchor="end">Madre de Dios</text>
+<path class="bar" d="M104.0,9.5 L628.7,9.5 Q632.7,9.5 632.7,13.5 L632.7,17.5 Q632.7,21.5 628.7,21.5 L104.0,21.5 Z" data-label="Madre de Dios" data-value="17.563221"/>
+<text class="barval" x="638.7" y="18.7" text-anchor="start">17,6</text>
+<text class="cat" x="96" y="33.7" text-anchor="end">Apurímac</text>
+<path class="bar" d="M104.0,24.5 L565.2,24.5 Q569.2,24.5 569.2,28.5 L569.2,32.5 Q569.2,36.5 565.2,36.5 L104.0,36.5 Z" data-label="Apurímac" data-value="15.455149"/>
+<text class="barval" x="575.2" y="33.7" text-anchor="start">15,5</text>
+<text class="cat" x="96" y="48.7" text-anchor="end">Tumbes</text>
+<path class="bar" d="M104.0,39.5 L490.4,39.5 Q494.4,39.5 494.4,43.5 L494.4,47.5 Q494.4,51.5 490.4,51.5 L104.0,51.5 Z" data-label="Tumbes" data-value="12.969648"/>
+<text class="barval" x="500.4" y="48.7" text-anchor="start">13,0</text>
+<text class="cat" x="96" y="63.7" text-anchor="end">Moquegua</text>
+<path class="bar" d="M104.0,54.5 L468.7,54.5 Q472.7,54.5 472.7,58.5 L472.7,62.5 Q472.7,66.5 468.7,66.5 L104.0,66.5 Z" data-label="Moquegua" data-value="12.248676"/>
+<text class="cat" x="96" y="78.7" text-anchor="end">Arequipa</text>
+<path class="bar" d="M104.0,69.5 L463.1,69.5 Q467.1,69.5 467.1,73.5 L467.1,77.5 Q467.1,81.5 463.1,81.5 L104.0,81.5 Z" data-label="Arequipa" data-value="12.062189"/>
+<text class="cat" x="96" y="93.7" text-anchor="end">Puno</text>
+<path class="bar" d="M104.0,84.5 L455.5,84.5 Q459.5,84.5 459.5,88.5 L459.5,92.5 Q459.5,96.5 455.5,96.5 L104.0,96.5 Z" data-label="Puno" data-value="11.811188"/>
+<text class="cat" x="96" y="108.7" text-anchor="end">Huánuco</text>
+<path class="bar" d="M104.0,99.5 L453.2,99.5 Q457.2,99.5 457.2,103.5 L457.2,107.5 Q457.2,111.5 453.2,111.5 L104.0,111.5 Z" data-label="Huánuco" data-value="11.734404"/>
+<text class="cat" x="96" y="123.7" text-anchor="end">Ayacucho</text>
+<path class="bar" d="M104.0,114.5 L438.0,114.5 Q442.0,114.5 442.0,118.5 L442.0,122.5 Q442.0,126.5 438.0,126.5 L104.0,126.5 Z" data-label="Ayacucho" data-value="11.229191"/>
+<text class="cat" x="96" y="138.7" text-anchor="end">Piura</text>
+<path class="bar" d="M104.0,129.5 L425.5,129.5 Q429.5,129.5 429.5,133.5 L429.5,137.5 Q429.5,141.5 425.5,141.5 L104.0,141.5 Z" data-label="Piura" data-value="10.813630"/>
+<text class="cat" x="96" y="153.7" text-anchor="end">San Martín</text>
+<path class="bar" d="M104.0,144.5 L416.9,144.5 Q420.9,144.5 420.9,148.5 L420.9,152.5 Q420.9,156.5 416.9,156.5 L104.0,156.5 Z" data-label="San Martín" data-value="10.529869"/>
+<text class="cat" x="96" y="168.7" text-anchor="end">Amazonas</text>
+<path class="bar" d="M104.0,159.5 L415.0,159.5 Q419.0,159.5 419.0,163.5 L419.0,167.5 Q419.0,171.5 415.0,171.5 L104.0,171.5 Z" data-label="Amazonas" data-value="10.464565"/>
+<text class="cat" x="96" y="183.7" text-anchor="end">Loreto</text>
+<path class="bar" d="M104.0,174.5 L413.4,174.5 Q417.4,174.5 417.4,178.5 L417.4,182.5 Q417.4,186.5 413.4,186.5 L104.0,186.5 Z" data-label="Loreto" data-value="10.411695"/>
+<text class="cat" x="96" y="198.7" text-anchor="end">Huancavelica</text>
+<path class="bar" d="M104.0,189.5 L398.1,189.5 Q402.1,189.5 402.1,193.5 L402.1,197.5 Q402.1,201.5 398.1,201.5 L104.0,201.5 Z" data-label="Huancavelica" data-value="9.904073"/>
+<text class="cat" x="96" y="213.7" text-anchor="end">Pasco</text>
+<path class="bar" d="M104.0,204.5 L397.5,204.5 Q401.5,204.5 401.5,208.5 L401.5,212.5 Q401.5,216.5 397.5,216.5 L104.0,216.5 Z" data-label="Pasco" data-value="9.883874"/>
+<text class="cat" x="96" y="228.7" text-anchor="end">Cusco</text>
+<path class="bar" d="M104.0,219.5 L384.5,219.5 Q388.5,219.5 388.5,223.5 L388.5,227.5 Q388.5,231.5 384.5,231.5 L104.0,231.5 Z" data-label="Cusco" data-value="9.450925"/>
+<text class="cat" x="96" y="243.7" text-anchor="end">Ucayali</text>
+<path class="bar" d="M104.0,234.5 L374.3,234.5 Q378.3,234.5 378.3,238.5 L378.3,242.5 Q378.3,246.5 374.3,246.5 L104.0,246.5 Z" data-label="Ucayali" data-value="9.111751"/>
+<text class="cat" x="96" y="258.7" text-anchor="end">Lambayeque</text>
+<path class="bar" d="M104.0,249.5 L346.3,249.5 Q350.3,249.5 350.3,253.5 L350.3,257.5 Q350.3,261.5 346.3,261.5 L104.0,261.5 Z" data-label="Lambayeque" data-value="8.181724"/>
+<text class="cat" x="96" y="273.7" text-anchor="end">Junín</text>
+<path class="bar" d="M104.0,264.5 L342.1,264.5 Q346.1,264.5 346.1,268.5 L346.1,272.5 Q346.1,276.5 342.1,276.5 L104.0,276.5 Z" data-label="Junín" data-value="8.044680"/>
+<text class="cat" x="96" y="288.7" text-anchor="end">Cajamarca</text>
+<path class="bar" d="M104.0,279.5 L338.2,279.5 Q342.2,279.5 342.2,283.5 L342.2,287.5 Q342.2,291.5 338.2,291.5 L104.0,291.5 Z" data-label="Cajamarca" data-value="7.914269"/>
+<text class="cat" x="96" y="303.7" text-anchor="end">Tacna</text>
+<path class="bar" d="M104.0,294.5 L326.8,294.5 Q330.8,294.5 330.8,298.5 L330.8,302.5 Q330.8,306.5 326.8,306.5 L104.0,306.5 Z" data-label="Tacna" data-value="7.535911"/>
+<text class="cat" x="96" y="318.7" text-anchor="end">Ancash</text>
+<path class="bar" d="M104.0,309.5 L322.7,309.5 Q326.7,309.5 326.7,313.5 L326.7,317.5 Q326.7,321.5 322.7,321.5 L104.0,321.5 Z" data-label="Ancash" data-value="7.399998"/>
+<text class="cat" x="96" y="333.7" text-anchor="end">La Libertad</text>
+<path class="bar" d="M104.0,324.5 L310.9,324.5 Q314.9,324.5 314.9,328.5 L314.9,332.5 Q314.9,336.5 310.9,336.5 L104.0,336.5 Z" data-label="La Libertad" data-value="7.008202"/>
+<text class="cat" x="96" y="348.7" text-anchor="end">Lima</text>
+<path class="bar" d="M104.0,339.5 L306.5,339.5 Q310.5,339.5 310.5,343.5 L310.5,347.5 Q310.5,351.5 306.5,351.5 L104.0,351.5 Z" data-label="Lima" data-value="6.861784"/>
+<text class="barval" x="316.5" y="348.7" text-anchor="start">6,9</text>
+<text class="cat" x="96" y="363.7" text-anchor="end">Ica</text>
+<path class="bar" d="M104.0,354.5 L302.7,354.5 Q306.7,354.5 306.7,358.5 L306.7,362.5 Q306.7,366.5 302.7,366.5 L104.0,366.5 Z" data-label="Ica" data-value="6.735429"/>
+<text class="barval" x="312.7" y="363.7" text-anchor="start">6,7</text>
+<text class="cat" x="96" y="378.7" text-anchor="end">Callao</text>
+<path class="bar" d="M104.0,369.5 L253.8,369.5 Q257.8,369.5 257.8,373.5 L257.8,377.5 Q257.8,381.5 253.8,381.5 L104.0,381.5 Z" data-label="Callao" data-value="5.108880"/>
+<text class="barval" x="263.8" y="378.7" text-anchor="start">5,1</text>
+<line class="axis-zero" x1="104.0" y1="8" x2="104.0" y2="383.0"/>
+</svg>
+      </div>
+      <div class="tooltip" data-open="0"></div>
+    </div>
+    <details class="table-view"><summary>Ver os números</summary>
+      <table><thead><tr><th>Departamento</th><th>Var. 12m (%)</th></tr></thead>
+      <tbody><tr><td>Madre de Dios</td><td>17,6</td></tr><tr><td>Apurímac</td><td>15,5</td></tr><tr><td>Tumbes</td><td>13,0</td></tr><tr><td>Moquegua</td><td>12,2</td></tr><tr><td>Arequipa</td><td>12,1</td></tr><tr><td>Puno</td><td>11,8</td></tr><tr><td>Huánuco</td><td>11,7</td></tr><tr><td>Ayacucho</td><td>11,2</td></tr><tr><td>Piura</td><td>10,8</td></tr><tr><td>San Martín</td><td>10,5</td></tr><tr><td>Amazonas</td><td>10,5</td></tr><tr><td>Loreto</td><td>10,4</td></tr><tr><td>Huancavelica</td><td>9,9</td></tr><tr><td>Pasco</td><td>9,9</td></tr><tr><td>Cusco</td><td>9,5</td></tr><tr><td>Ucayali</td><td>9,1</td></tr><tr><td>Lambayeque</td><td>8,2</td></tr><tr><td>Junín</td><td>8,0</td></tr><tr><td>Cajamarca</td><td>7,9</td></tr><tr><td>Tacna</td><td>7,5</td></tr><tr><td>Ancash</td><td>7,4</td></tr><tr><td>La Libertad</td><td>7,0</td></tr><tr><td>Lima</td><td>6,9</td></tr><tr><td>Ica</td><td>6,7</td></tr><tr><td>Callao</td><td>5,1</td></tr></tbody></table></details>
+  </section>
+
+  <section class="section forecast viz-root">
+    <h2>Previsão</h2>
+    <p class="block-sub">Modelo de 3 meses para a inadimplência total,
+    reestimado a cada mês. Previsões antigas nunca são reescritas.</p>
+    
+      <div class="forecast-hero">
+        <p class="tile-label">Previsão para nov/2026</p>
+        <p class="hero-value">5,07<span class="hero-unit"> %</span></p>
+        <p class="tile-delta">de 5,04% em ago/2026 ·
+          +0,03 p.p. em 3 meses</p>
+      </div>
+    <ul class="legend"><li><span class="swatch" style="background:var(--series-1)"></span>Realizado</li><li><span class="swatch" style="background:var(--series-2)"></span>Previsto 3m</li></ul>
+    <div class="chart-wrap">
+      <div class="chart-scroll">
+        <svg class="chart" id="chart-forecast" viewBox="0 0 760 300" role="img" preserveAspectRatio="xMidYMid meet" data-series='[{"label": "Realizado", "slot": 1, "values": [3.11, 3.11, 3.02, 2.93, 3.01, 2.96, 3.04, 3.07, 3.1, 2.99, 3.1, 3.1, 3.11, 3.09, 3.06, 2.99, 3.06, 3.1, 3.24, 3.36, 3.31, 2.95, 2.82, 2.7, 2.47, 2.4, 2.27, 2.16, 2.19, 2.28, 2.18, 2.24, 2.39, 2.32, 2.36, 2.37, 2.34, 2.33, 2.36, 2.35, 2.51, 2.57, 2.66, 2.72, 2.79, 2.73, 2.84, 2.9, 2.92, 3.04, 3.07, 3.07, 3.24, 3.36, 3.35, 3.54, 3.65, 3.61, 3.63, 3.61, 3.54, 3.56, 3.53, 3.29, 3.38, 3.38, 3.33, 3.37, 3.43, 3.29, 3.3, 3.33, 3.34, 3.3, 3.27, 3.08, 3.34, 3.41, 3.44, 3.67, 3.72, 3.75, 3.96, 4.14, 4.09, 4.18, 4.24, 4.2, 4.44, 4.64, 4.52, 4.64, 4.75, 4.58, 4.88, 5.04]}, {"label": "Previsto 3m", "slot": 2, "values": [3.082408612495857, 3.030232140493803, 3.0296376392987194, 3.0163882840553953, 3.005458243720062, 2.9804514509657603, 2.9255274033938035, 3.0023419897619092, 2.9284692012331393, 2.975155266910884, 3.0400330289096207, 3.0734516822264317, 3.0675394525649553, 3.1309478238557187, 3.1448282018224814, 3.0731142715614577, 3.06021388220932, 3.048267020534083, 3.0308016958505433, 3.0098792615030616, 3.0034987821271693, 2.9767550800105385, 2.9993659608635195, 2.9905729660719285, 2.818048646585523, 2.7814994320529545, 2.702893273813788, 2.4636133538078413, 2.398770248375843, 2.2653197879148808, 2.177687696745445, 2.192892714944006, 2.194999625791645, 2.1903412113480094, 2.3071743034179213, 2.413925277986764, 2.3981899723033857, 2.4757537224436974, 2.5786500833428367, 2.619610543318757, 2.653512473813257, 2.7026600961596436, 2.673138046347314, 2.6999260356738515, 2.743642117117761, 2.818467463687304, 2.898390251717053, 2.9726246724409062, 2.9458070646663694, 3.067778011239872, 3.0659270934811325, 3.0656555575987605, 3.1477002042391797, 3.181197700708742, 3.1418086189976604, 3.227888476398853, 3.2944276554437284, 3.2799821574621273, 3.4534997811132078, 3.577949670582563, 3.539794924379322, 3.525148631487208, 3.537504694580167, 3.489163958728871, 3.4583329102087497, 3.3968368037643693, 3.2122621312274644, 3.228745147881804, 3.2044104391105743, 3.1207789746260537, 3.1205387580271817, 3.1636920425596355, 3.0821940900378593, 3.1091425772277645, 3.1652203005508683, 3.169355057579909, 3.174555980964766, 3.1809566591056067, 3.0867830163731584, 3.315635923933992, 3.3880265484615824, 3.4030749195463166, 3.6319446375728677, 3.7012041886923983, 3.755073419618365, 3.9601845038298604, 4.1379010054186836, 4.1122805245996785, 4.223315033689847, 4.282670353938246, 4.228854473333572, 4.433664651330337, 4.624170395286261, 4.521323612554253, 4.674381354558188, 4.791367452628283]}]' data-dates='["2018-09", "2018-10", "2018-11", "2018-12", "2019-01", "2019-02", "2019-03", "2019-04", "2019-05", "2019-06", "2019-07", "2019-08", "2019-09", "2019-10", "2019-11", "2019-12", "2020-01", "2020-02", "2020-03", "2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09", "2020-10", "2020-11", "2020-12", "2021-01", "2021-02", "2021-03", "2021-04", "2021-05", "2021-06", "2021-07", "2021-08", "2021-09", "2021-10", "2021-11", "2021-12", "2022-01", "2022-02", "2022-03", "2022-04", "2022-05", "2022-06", "2022-07", "2022-08", "2022-09", "2022-10", "2022-11", "2022-12", "2023-01", "2023-02", "2023-03", "2023-04", "2023-05", "2023-06", "2023-07", "2023-08", "2023-09", "2023-10", "2023-11", "2023-12", "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08"]' data-unit="%" data-decimals="2" data-ylo="2" data-yhi="6">
+<line class="grid" x1="44" y1="274.0" x2="642" y2="274.0"/>
+<text class="tick" x="36" y="277.0" text-anchor="end">2</text>
+<line class="grid" x1="44" y1="208.0" x2="642" y2="208.0"/>
+<text class="tick" x="36" y="211.0" text-anchor="end">3</text>
+<line class="grid" x1="44" y1="142.0" x2="642" y2="142.0"/>
+<text class="tick" x="36" y="145.0" text-anchor="end">4</text>
+<line class="grid" x1="44" y1="76.0" x2="642" y2="76.0"/>
+<text class="tick" x="36" y="79.0" text-anchor="end">5</text>
+<line class="grid" x1="44" y1="10.0" x2="642" y2="10.0"/>
+<text class="tick" x="36" y="13.0" text-anchor="end">6</text>
+<text class="tick" x="44.0" y="291" text-anchor="middle">2018</text>
+<text class="tick" x="69.2" y="291" text-anchor="middle">2019</text>
+<text class="tick" x="144.7" y="291" text-anchor="middle">2020</text>
+<text class="tick" x="220.3" y="291" text-anchor="middle">2021</text>
+<text class="tick" x="295.8" y="291" text-anchor="middle">2022</text>
+<text class="tick" x="371.3" y="291" text-anchor="middle">2023</text>
+<text class="tick" x="446.9" y="291" text-anchor="middle">2024</text>
+<text class="tick" x="522.4" y="291" text-anchor="middle">2025</text>
+<text class="tick" x="597.9" y="291" text-anchor="middle">2026</text>
+<polyline class="series" style="stroke:var(--series-1)" points="44.0,200.7 50.3,200.7 56.6,206.7 62.9,212.6 69.2,207.3 75.5,210.6 81.8,205.4 88.1,203.4 94.4,201.4 100.7,208.7 106.9,201.4 113.2,201.4 119.5,200.7 125.8,202.1 132.1,204.0 138.4,208.7 144.7,204.0 151.0,201.4 157.3,192.2 163.6,184.2 169.9,187.5 176.2,211.3 182.5,219.9 188.8,227.8 195.1,243.0 201.4,247.6 207.7,256.2 214.0,263.4 220.3,261.5 226.5,255.5 232.8,262.1 239.1,258.2 245.4,248.3 251.7,252.9 258.0,250.2 264.3,249.6 270.6,251.6 276.9,252.2 283.2,250.2 289.5,250.9 295.8,240.3 302.1,236.4 308.4,230.4 314.7,226.5 321.0,221.9 327.3,225.8 333.6,218.6 339.9,214.6 346.1,213.3 352.4,205.4 358.7,203.4 365.0,203.4 371.3,192.2 377.6,184.2 383.9,184.9 390.2,172.4 396.5,165.1 402.8,167.7 409.1,166.4 415.4,167.7 421.7,172.4 428.0,171.0 434.3,173.0 440.6,188.9 446.9,182.9 453.2,182.9 459.5,186.2 465.7,183.6 472.0,179.6 478.3,188.9 484.6,188.2 490.9,186.2 497.2,185.6 503.5,188.2 509.8,190.2 516.1,202.7 522.4,185.6 528.7,180.9 535.0,179.0 541.3,163.8 547.6,160.5 553.9,158.5 560.2,144.6 566.5,132.8 572.8,136.1 579.1,130.1 585.3,126.2 591.6,128.8 597.9,113.0 604.2,99.8 610.5,107.7 616.8,99.8 623.1,92.5 629.4,103.7 635.7,83.9 642.0,73.4"/>
+<polyline class="series" style="stroke:var(--series-2)" points="44.0,202.6 50.3,206.0 56.6,206.0 62.9,206.9 69.2,207.6 75.5,209.3 81.8,212.9 88.1,207.8 94.4,212.7 100.7,209.6 106.9,205.4 113.2,203.2 119.5,203.5 125.8,199.4 132.1,198.4 138.4,203.2 144.7,204.0 151.0,204.8 157.3,206.0 163.6,207.3 169.9,207.8 176.2,209.5 182.5,208.0 188.8,208.6 195.1,220.0 201.4,222.4 207.7,227.6 214.0,243.4 220.3,247.7 226.5,256.5 232.8,262.3 239.1,261.3 245.4,261.1 251.7,261.4 258.0,253.7 264.3,246.7 270.6,247.7 276.9,242.6 283.2,235.8 289.5,233.1 295.8,230.9 302.1,227.6 308.4,229.6 314.7,227.8 321.0,224.9 327.3,220.0 333.6,214.7 339.9,209.8 346.1,211.6 352.4,203.5 358.7,203.6 365.0,203.7 371.3,198.3 377.6,196.0 383.9,198.6 390.2,193.0 396.5,188.6 402.8,189.5 409.1,178.1 415.4,169.9 421.7,172.4 428.0,173.3 434.3,172.5 440.6,175.7 446.9,177.8 453.2,181.8 459.5,194.0 465.7,192.9 472.0,194.5 478.3,200.0 484.6,200.0 490.9,197.2 497.2,202.6 503.5,200.8 509.8,197.1 516.1,196.8 522.4,196.5 528.7,196.1 535.0,202.3 541.3,187.2 547.6,182.4 553.9,181.4 560.2,166.3 566.5,161.7 572.8,158.2 579.1,144.6 585.3,132.9 591.6,134.6 597.9,127.3 604.2,123.3 610.5,126.9 616.8,113.4 623.1,100.8 629.4,107.6 635.7,97.5 642.0,89.8"/>
+<circle class="dot-ring" cx="642.0" cy="73.4" r="4"/>
+<circle class="dot" cx="642.0" cy="73.4" r="4" style="fill:var(--series-1)"/>
+<text class="endlabel" x="655.0" y="76.4">Realizado <tspan class="endvalue">5,04</tspan></text>
+<circle class="dot-ring" cx="642.0" cy="89.8" r="4"/>
+<circle class="dot" cx="642.0" cy="89.8" r="4" style="fill:var(--series-2)"/>
+<text class="endlabel" x="655.0" y="92.8">Previsto 3m <tspan class="endvalue">4,79</tspan></text>
+<line class="crosshair" x1="0" y1="10" x2="0" y2="274" hidden/>
+<g class="hoverdots"></g>
+<rect class="hitbox" x="44" y="10" width="598" height="264"/>
+</svg>
+      </div>
+      <div class="tooltip" data-open="0"></div>
+    </div>
+
+    <h3>Placar</h3>
+    <p class="block-sub">96 previsões fora da amostra, de
+    set/2018 a ago/2026. Em cada data o modelo
+    foi reestimado usando só o que existia até ali. O modelo bate o passeio aleatório em 9.7% de RMSE.</p>
+    <div class="table-scroll"><table class="scorecard">
+      <thead><tr><th></th><th>MAE (p.p.)</th><th>RMSE (p.p.)</th></tr></thead>
+      <tbody>
+        <tr><td>Modelo</td><td>0,151</td><td>0,193</td></tr>
+        <tr><td>Passeio aleatório</td><td>0,167</td>
+            <td>0,214</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Registro de previsões</h3>
+    <p class="block-sub">Cada linha é escrita no dia em que a previsão foi feita; só a
+    coluna de realizado é preenchida depois. O arquivo é versionado em git, então a data
+    não pode ser ajustada a posteriori:
+    <a href="https://github.com/eduvera8/latam-credit-monitor/commits/HEAD/data/forecasts.csv">histórico</a> ·
+    <a href="forecasts.csv">CSV</a>.</p>
+    <div class="table-scroll"><table class="scorecard">
+      <thead><tr><th>Mês previsto</th><th>Feita em</th><th>Previsto</th>
+        <th>Realizado</th><th>Erro</th></tr></thead>
+      <tbody><tr><td>nov/2026</td><td>2026-10-26</td><td>5,07</td><td>—</td><td>—</td></tr></tbody>
+    </table></div>
+
+    <p class="sources">Preditores, todos observáveis no momento da previsão:
+    nível de inadimplência, momento de 3 meses, crescimento do crédito 12m atrás, hiato manchete–ajustada, variação 12m da taxa de juros. O alvo é a variação de 3 meses, não o
+    nível. Mínimo de 60 observações antes da primeira previsão.
+    Código em <a href="https://github.com/eduvera8/latam-credit-monitor/blob/HEAD/monitor/forecast.py"><code>forecast.py</code></a>.</p>
+  </section>
 
   <section class="section">
     <h2>Fontes e método</h2>
-    <ul class="sources"><li><strong>Inadimplência da carteira de crédito</strong> — Banco Central do Brasil - Sistema Gerenciador de Séries Temporais (SGS), séries <code>21082</code>, <code>21083</code>, <code>21084</code>.</li><li><strong>Crescimento do saldo de crédito</strong> — Banco Central do Brasil - Sistema Gerenciador de Séries Temporais (SGS), séries <code>20539</code>, <code>20540</code>, <code>20541</code>.</li><li><strong>Taxa média de juros das concessões</strong> — Banco Central do Brasil - Sistema Gerenciador de Séries Temporais (SGS), séries <code>20714</code>, <code>20715</code>, <code>20716</code>.</li></ul>
+    <ul class="sources"><li><strong>Inadimplência da carteira de crédito</strong> — Banco Central do Brasil - Sistema Gerenciador de Séries Temporais (SGS), séries <code>21082</code>, <code>21083</code>, <code>21084</code>.</li><li><strong>Inadimplência ajustada pelo efeito denominador</strong> — Banco Central do Brasil - Sistema Gerenciador de Séries Temporais (SGS), séries <code>21082</code>, <code>20539</code>.</li><li><strong>Crescimento do saldo de crédito</strong> — Banco Central do Brasil - Sistema Gerenciador de Séries Temporais (SGS), séries <code>20539</code>, <code>20540</code>, <code>20541</code>.</li><li><strong>Taxa média de juros das concessões</strong> — Banco Central do Brasil - Sistema Gerenciador de Séries Temporais (SGS), séries <code>20714</code>, <code>20715</code>, <code>20716</code>.</li><li><strong>Cartera atrasada do sistema bancário peruano</strong> — Banco Central de Reserva del Perú (BCRPData), séries <code>PN07746EM</code>.</li><li><strong>Crédito por departamento, variação de 12 meses</strong> — Banco Central de Reserva del Perú (BCRPData), séries <code>RD13562DM</code>, <code>RD13565DM</code>, <code>RD13568DM</code>, <code>RD13571DM</code>, <code>RD13574DM</code>, <code>RD13577DM</code>, <code>RD13580DM</code>, <code>RD13583DM</code>, <code>RD13586DM</code>, <code>RD13589DM</code>, <code>RD13592DM</code>, <code>RD13595DM</code>, <code>RD13598DM</code>, <code>RD13601DM</code>, <code>RD13604DM</code>, <code>RD13607DM</code>, <code>RD13610DM</code>, <code>RD13613DM</code>, <code>RD13616DM</code>, <code>RD13619DM</code>, <code>RD13622DM</code>, <code>RD13625DM</code>, <code>RD13628DM</code>, <code>RD13631DM</code>, <code>RD13634DM</code>.</li></ul>
     <p class="sources">O painel completo em formato longo pode ser baixado em
     <a href="panel.csv"><code>panel.csv</code></a> e o código que gera esta página
     está em <a href="https://github.com/eduvera8/latam-credit-monitor/tree/HEAD/monitor"><code>monitor/</code></a>. A coleta roda

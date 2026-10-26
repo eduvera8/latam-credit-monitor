@@ -167,7 +167,82 @@ def line_chart(chart_id, series, dates, unit="", decimals=2):
 
 
 def legend(series):
+    # One series needs no legend: the chart's own title names it.
+    if len(series) < 2:
+        return ""
     items = "".join(
         f'<li><span class="swatch" style="background:var({SLOT_VAR[s["slot"]]})"></span>{s["label"]}</li>'
         for s in series)
     return f'<ul class="legend">{items}</ul>'
+
+
+BAR_W = 760
+BAR_PAD_L, BAR_PAD_R, BAR_PAD_T, BAR_PAD_B = 104, 54, 8, 26
+BAR_ROW, BAR_GAP = 15, 3   # 3px of surface between adjacent bars
+
+
+def _bar_path(x0, x1, y, h, r=4):
+    """A bar with its growing end rounded and its baseline end square."""
+    r = min(r, abs(x1 - x0), h / 2)
+    if r <= 0:
+        return f"M{x0:.1f},{y:.1f} L{x1:.1f},{y:.1f} L{x1:.1f},{y + h:.1f} L{x0:.1f},{y + h:.1f} Z"
+    s = 1 if x1 >= x0 else -1
+    return (f"M{x0:.1f},{y:.1f} L{x1 - s * r:.1f},{y:.1f} Q{x1:.1f},{y:.1f} {x1:.1f},{y + r:.1f} "
+            f"L{x1:.1f},{y + h - r:.1f} Q{x1:.1f},{y + h:.1f} {x1 - s * r:.1f},{y + h:.1f} "
+            f"L{x0:.1f},{y + h:.1f} Z")
+
+
+def ranked_bar(chart_id, items, unit="", decimals=1, extremes=3):
+    """A ranked horizontal bar chart for nominal categories.
+
+    One series, so one colour for every bar - shading by value would burn the
+    only free channel on information the bar length already carries. Values are
+    direct-labelled only at the extremes; the gridlines, the hover tooltip and
+    the table below carry the rest.
+    """
+    if not items:
+        return '<p class="chart-empty">Sem dados.</p>'
+
+    values = [v for _, v in items]
+    lo, hi, ticks = nice_bounds(min(min(values), 0), max(max(values), 0))
+    tick_dec = 0 if all(abs(t - round(t)) < 1e-9 for t in ticks) else 1
+
+    plot_w = BAR_W - BAR_PAD_L - BAR_PAD_R
+    height = BAR_PAD_T + len(items) * BAR_ROW + BAR_PAD_B
+
+    def sx(v):
+        return BAR_PAD_L + plot_w * (v - lo) / (hi - lo)
+
+    zero = sx(0)
+    out = [f'<svg class="chart chart-bars" id="{chart_id}" viewBox="0 0 {BAR_W} {height}" '
+           f'role="img" preserveAspectRatio="xMidYMid meet" data-unit="{unit}" '
+           f'data-decimals="{decimals}">']
+
+    for t in ticks:
+        x = sx(t)
+        out.append(f'<line class="grid" x1="{x:.1f}" y1="{BAR_PAD_T}" x2="{x:.1f}" '
+                   f'y2="{BAR_PAD_T + len(items) * BAR_ROW:.1f}"/>')
+        out.append(f'<text class="tick" x="{x:.1f}" y="{height - 8}" text-anchor="middle">'
+                   f'{num(t, tick_dec)}</text>')
+
+    ranked = sorted(range(len(items)), key=lambda i: items[i][1], reverse=True)
+    flagged = set(ranked[:extremes]) | set(ranked[-extremes:])
+
+    for row, (label, value) in enumerate(items):
+        y = BAR_PAD_T + row * BAR_ROW + BAR_GAP / 2
+        h = BAR_ROW - BAR_GAP
+        out.append(f'<text class="cat" x="{BAR_PAD_L - 8}" y="{y + h / 2 + 3.2:.1f}" '
+                   f'text-anchor="end">{label}</text>')
+        out.append(f'<path class="bar" d="{_bar_path(zero, sx(value), y, h)}" '
+                   f'data-label="{label}" data-value="{value:.6f}"/>')
+        if row in flagged:
+            end = sx(value)
+            anchor = "start" if value >= 0 else "end"
+            dx = 6 if value >= 0 else -6
+            out.append(f'<text class="barval" x="{end + dx:.1f}" y="{y + h / 2 + 3.2:.1f}" '
+                       f'text-anchor="{anchor}">{num(value, decimals)}</text>')
+
+    out.append(f'<line class="axis-zero" x1="{zero:.1f}" y1="{BAR_PAD_T}" x2="{zero:.1f}" '
+               f'y2="{BAR_PAD_T + len(items) * BAR_ROW:.1f}"/>')
+    out.append("</svg>")
+    return "\n".join(out)

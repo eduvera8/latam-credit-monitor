@@ -44,6 +44,21 @@
           "tile_label": "Inadimplência total"
         },
         {
+          "id": "ajustada",
+          "title": "Inadimplência ajustada pelo efeito denominador",
+          "subtitle": "Carteira problemática sobre o saldo de doze meses antes, contra o índice publicado. Quando a carteira cresce rápido, a manchete subestima.",
+          "unit": "%",
+          "decimals": 2,
+          "transform": "derived",
+          "derive": "adjusted_npl",
+          "tile_label": "Hiato manchete–ajustada",
+          "inputs": {
+            "npl": "21082",
+            "book": "20539"
+          },
+          "series": []
+        },
+        {
           "id": "saldo",
           "title": "Crescimento do saldo de crédito",
           "subtitle": "Variação nominal sobre doze meses do saldo da carteira. Não deflacionado.",
@@ -100,13 +115,178 @@
     {
       "id": "pe",
       "name": "Peru",
-      "enabled": false,
-      "_todo": "Fill in BCRP / SBS codes and set enabled=true. The BCRP API answers at estadisticas.bcrp.gob.pe/estadisticas/series/api/{code}/json/{start}/{end}/esp but sits behind a bot filter, so a CI runner may be blocked - fetch.py keeps the last good CSV when a source fails. SBS publishes departmental credit and morosidad as spreadsheets, which need a separate reader.",
+      "enabled": true,
       "source": "Banco Central de Reserva del Perú (BCRPData)",
       "source_url": "https://estadisticas.bcrp.gob.pe/estadisticas/series/",
       "api_template": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/{code}/json/{start}/{end}/esp",
-      "start": "2012-1",
-      "blocks": []
+      "start": "2010-1",
+      "blocks": [
+        {
+          "id": "atrasada",
+          "title": "Cartera atrasada do sistema bancário peruano",
+          "subtitle": "Cartera atrasada neta sobre colocaciones netas, em %. Empresas bancarias. É o equivalente peruano da inadimplência, com definição regulatória própria — não é diretamente comparável ao número brasileiro.",
+          "unit": "%",
+          "decimals": 2,
+          "transform": "level",
+          "tile_label": "Cartera atrasada · Peru",
+          "series": [
+            {
+              "code": "PN07746EM",
+              "label": "Bancos",
+              "slot": 1
+            }
+          ],
+          "min_date": "2018-01",
+          "caveat": "Dois avisos sobre esta série. Ela tem uma quebra de definição em janeiro de 2018 — até dezembro de 2017 é líquida de provisões e chega a ser negativa, saltando de −0,24% para 3,15% de um mês para o outro — por isso o gráfico começa em 2018. E a fonte não publica o mês de setembro em nenhum ano: os cortes na linha são esses buracos, não interrupções do indicador."
+        },
+        {
+          "id": "departamentos",
+          "title": "Crédito por departamento, variação de 12 meses",
+          "subtitle": "Crédito directo do sistema financeiro ao setor privado, por departamento, em soles correntes. É o grão que quase ninguém acompanha mês a mês: o ciclo de crédito peruano é muito desigual entre regiões.",
+          "unit": "%",
+          "decimals": 1,
+          "transform": "ranked_yoy",
+          "tile_label": "Mediana departamental · Peru",
+          "series": [
+            {
+              "code": "RD13562DM",
+              "label": "Amazonas",
+              "slot": 1
+            },
+            {
+              "code": "RD13565DM",
+              "label": "Ancash",
+              "slot": 1
+            },
+            {
+              "code": "RD13568DM",
+              "label": "Apurímac",
+              "slot": 1
+            },
+            {
+              "code": "RD13571DM",
+              "label": "Arequipa",
+              "slot": 1
+            },
+            {
+              "code": "RD13574DM",
+              "label": "Ayacucho",
+              "slot": 1
+            },
+            {
+              "code": "RD13577DM",
+              "label": "Cajamarca",
+              "slot": 1
+            },
+            {
+              "code": "RD13580DM",
+              "label": "Callao",
+              "slot": 1
+            },
+            {
+              "code": "RD13583DM",
+              "label": "Cusco",
+              "slot": 1
+            },
+            {
+              "code": "RD13586DM",
+              "label": "Huancavelica",
+              "slot": 1
+            },
+            {
+              "code": "RD13589DM",
+              "label": "Huánuco",
+              "slot": 1
+            },
+            {
+              "code": "RD13592DM",
+              "label": "Ica",
+              "slot": 1
+            },
+            {
+              "code": "RD13595DM",
+              "label": "Junín",
+              "slot": 1
+            },
+            {
+              "code": "RD13598DM",
+              "label": "La Libertad",
+              "slot": 1
+            },
+            {
+              "code": "RD13601DM",
+              "label": "Lambayeque",
+              "slot": 1
+            },
+            {
+              "code": "RD13604DM",
+              "label": "Lima",
+              "slot": 1
+            },
+            {
+              "code": "RD13607DM",
+              "label": "Loreto",
+              "slot": 1
+            },
+            {
+              "code": "RD13610DM",
+              "label": "Madre de Dios",
+              "slot": 1
+            },
+            {
+              "code": "RD13613DM",
+              "label": "Moquegua",
+              "slot": 1
+            },
+            {
+              "code": "RD13616DM",
+              "label": "Pasco",
+              "slot": 1
+            },
+            {
+              "code": "RD13619DM",
+              "label": "Piura",
+              "slot": 1
+            },
+            {
+              "code": "RD13622DM",
+              "label": "Puno",
+              "slot": 1
+            },
+            {
+              "code": "RD13625DM",
+              "label": "San Martín",
+              "slot": 1
+            },
+            {
+              "code": "RD13628DM",
+              "label": "Tacna",
+              "slot": 1
+            },
+            {
+              "code": "RD13631DM",
+              "label": "Tumbes",
+              "slot": 1
+            },
+            {
+              "code": "RD13634DM",
+              "label": "Ucayali",
+              "slot": 1
+            }
+          ]
+        }
+      ],
+      "note": "A API do BCRP fica atrás de um filtro de bots; fetch.py tenta de novo com backoff e, se ainda assim falhar, mantém o último CSV bom."
     }
-  ]
+  ],
+  "forecast": {
+    "enabled": true,
+    "country": "br",
+    "target_label": "Inadimplência total (Brasil)",
+    "inputs": {
+      "npl": "21082",
+      "book": "20539",
+      "rate": "20714"
+    }
+  }
 }

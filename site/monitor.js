@@ -112,4 +112,37 @@ function wire(svg) {
   hitbox.addEventListener("pointerleave", hide);
 }
 
-document.querySelectorAll("svg.chart").forEach(wire);
+function wireBars(svg) {
+  const wrap = svg.closest(".chart-wrap");
+  const tooltip = wrap.querySelector(".tooltip");
+  const decimals = Number(svg.dataset.decimals || 1);
+  const unit = svg.dataset.unit || "";
+
+  svg.querySelectorAll("path.bar").forEach((bar) => {
+    bar.addEventListener("pointerenter", () => {
+      tooltip.innerHTML =
+        `<p class="tt-date">${bar.dataset.label}</p>` +
+        `<div class="tt-row"><span class="tt-swatch" style="background:var(--series-1)"></span>` +
+        `<span class="tt-label">Var. 12m</span>` +
+        `<span class="tt-val">${fmt(Number(bar.dataset.value), decimals)}${unit ? ` ${unit}` : ""}</span></div>`;
+      tooltip.dataset.open = "1";
+
+      const box = bar.getBoundingClientRect();
+      const wrapBox = wrap.getBoundingClientRect();
+      let left = box.right - wrapBox.left + 12;
+      if (left + tooltip.offsetWidth > wrapBox.width) {
+        left = box.left - wrapBox.left - tooltip.offsetWidth - 12;
+      }
+      tooltip.style.left = `${Math.max(0, left)}px`;
+      tooltip.style.top = `${box.top - wrapBox.top - 6}px`;
+    });
+    bar.addEventListener("pointerleave", () => {
+      tooltip.dataset.open = "0";
+    });
+  });
+}
+
+document.querySelectorAll("svg.chart").forEach((svg) => {
+  if (svg.classList.contains("chart-bars")) wireBars(svg);
+  else wire(svg);
+});

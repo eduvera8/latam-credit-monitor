@@ -120,3 +120,53 @@
      and values on a phone anyway. */
   .chart-scroll { margin-inline: -1px; }
 }
+
+/* ---------- forecast ---------- */
+
+.forecast h3 { margin: 2rem 0 .3rem; font-size: 1rem; }
+
+.forecast-hero {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  padding: 1rem 1.2rem 1.1rem;
+  margin: 1.4rem 0 1.8rem;
+}
+/* Sans on the hero figure: a serif here reads as decoration. */
+.hero-value {
+  font-family: var(--sans); font-size: 3rem; font-weight: 650; line-height: 1;
+  color: var(--ink); font-variant-numeric: tabular-nums; margin: .1rem 0 0;
+}
+.hero-unit { font-size: .4em; font-weight: 600; color: var(--ink-soft); }
+
+.scorecard {
+  border-collapse: collapse; margin: .7rem 0 0; font-family: var(--sans); font-size: .83rem;
+}
+.scorecard th, .scorecard td {
+  text-align: right; padding: .35rem .85rem .35rem 0;
+  border-bottom: 1px solid var(--rule); font-variant-numeric: tabular-nums;
+}
+.scorecard th:first-child, .scorecard td:first-child { text-align: left; }
+.scorecard thead th { color: var(--ink-soft); font-weight: 600; }
+.scorecard tbody tr:first-child td { font-weight: 650; }
+
+/* A narrow screen scrolls the table, never the page. */
+.table-scroll { overflow-x: auto; margin-top: .7rem; }
+.table-scroll .scorecard { margin-top: 0; }
+.table-view table { display: block; overflow-x: auto; white-space: nowrap; }
+
+/* ---------- ranked bars ---------- */
+
+.chart .cat { font-size: 9.5px; fill: var(--ink-soft); }
+.chart .barval { font-size: 9.5px; fill: var(--ink); font-weight: 650;
+  font-variant-numeric: tabular-nums; }
+/* One series, one colour. Shading by value would double-encode bar length. */
+.chart .bar { fill: var(--series-1); }
+.chart .bar:hover { fill: var(--series-1); filter: brightness(1.12); }
+.chart .axis-zero { stroke: var(--ink-soft); stroke-width: 1; opacity: .55; }
+
+/* A known defect in a source series is stated on the page, not hidden. */
+.caveat {
+  font-size: .84rem; color: var(--ink-soft); margin: -.4rem 0 .9rem;
+  padding-left: .7rem; border-left: 2px solid var(--rule);
+}
