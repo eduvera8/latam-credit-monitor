@@ -1,0 +1,70 @@
+name: Update credit monitor
+
+# Refresh the data, rebuild the page, commit anything that changed, and publish.
+#
+# Note on the schedule: GitHub only fires `schedule` events from the repository's
+# DEFAULT branch. While this workflow lives on a feature branch the cron will not
+# run — use "Run workflow" in the Actions tab, or merge to the default branch.
+
+on:
+  schedule:
+    - cron: "23 9 * * 1"   # Mondays, 09:23 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - "monitor/**"
+      - "site/**"
+      - ".github/workflows/monitor.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No pip install step: the monitor is standard library only, so there is
+      # no dependency that can drift out from under the monthly run.
+      - name: Fetch source series
+        run: python monitor/fetch.py
+
+      - name: Rebuild page and panel
+        run: python monitor/build.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data site; then
+            echo "No change in the published data."
+          else
+            git add data site
+            git commit -m "Refresh credit monitor data"
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

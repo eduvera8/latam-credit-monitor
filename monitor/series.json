@@ -1,0 +1,112 @@
+{
+  "_note": "Series catalogue for the LatAm Credit Monitor. Each series carries its source code so every number on the site is auditable: look the code up in the provider's catalogue and you get the same series. Labels are ours; codes are authoritative. If you relabel a series, verify the code first.",
+  "site": {
+    "title": "Monitor de Crédito LatAm",
+    "tagline": "Acompanhamento mensal do ciclo de crédito na América Latina.",
+    "author_name": "Eduardo Vera",
+    "author_url": "https://github.com/eduvera8",
+    "repo_url": "https://github.com/eduvera8/latam-credit-monitor"
+  },
+  "countries": [
+    {
+      "id": "br",
+      "name": "Brasil",
+      "enabled": true,
+      "source": "Banco Central do Brasil - Sistema Gerenciador de Séries Temporais (SGS)",
+      "source_url": "https://www3.bcb.gov.br/sgspub/",
+      "api_template": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados?formato=json&dataInicial={start}",
+      "start": "01/01/2012",
+      "blocks": [
+        {
+          "id": "inadimplencia",
+          "title": "Inadimplência da carteira de crédito",
+          "subtitle": "Atrasos acima de 90 dias, em % do saldo. Sistema Financeiro Nacional.",
+          "unit": "%",
+          "decimals": 2,
+          "transform": "level",
+          "series": [
+            {
+              "code": "21082",
+              "label": "Total",
+              "slot": 1
+            },
+            {
+              "code": "21083",
+              "label": "Pessoa jurídica",
+              "slot": 2
+            },
+            {
+              "code": "21084",
+              "label": "Pessoa física",
+              "slot": 3
+            }
+          ],
+          "tile_label": "Inadimplência total"
+        },
+        {
+          "id": "saldo",
+          "title": "Crescimento do saldo de crédito",
+          "subtitle": "Variação nominal sobre doze meses do saldo da carteira. Não deflacionado.",
+          "unit": "%",
+          "decimals": 1,
+          "transform": "yoy",
+          "series": [
+            {
+              "code": "20539",
+              "label": "Total",
+              "slot": 1
+            },
+            {
+              "code": "20540",
+              "label": "Pessoa jurídica",
+              "slot": 2
+            },
+            {
+              "code": "20541",
+              "label": "Pessoa física",
+              "slot": 3
+            }
+          ],
+          "tile_label": "Crédito total · var. 12m"
+        },
+        {
+          "id": "taxas",
+          "title": "Taxa média de juros das concessões",
+          "subtitle": "Taxa média de juros das operações de crédito, % ao ano.",
+          "unit": "% a.a.",
+          "decimals": 1,
+          "transform": "level",
+          "series": [
+            {
+              "code": "20714",
+              "label": "Total",
+              "slot": 1
+            },
+            {
+              "code": "20715",
+              "label": "Pessoa jurídica",
+              "slot": 2
+            },
+            {
+              "code": "20716",
+              "label": "Pessoa física",
+              "slot": 3
+            }
+          ],
+          "tile_label": "Juros médios · total"
+        }
+      ]
+    },
+    {
+      "id": "pe",
+      "name": "Peru",
+      "enabled": false,
+      "_todo": "Fill in BCRP / SBS codes and set enabled=true. The BCRP API answers at estadisticas.bcrp.gob.pe/estadisticas/series/api/{code}/json/{start}/{end}/esp but sits behind a bot filter, so a CI runner may be blocked - fetch.py keeps the last good CSV when a source fails. SBS publishes departmental credit and morosidad as spreadsheets, which need a separate reader.",
+      "source": "Banco Central de Reserva del Perú (BCRPData)",
+      "source_url": "https://estadisticas.bcrp.gob.pe/estadisticas/series/",
+      "api_template": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/{code}/json/{start}/{end}/esp",
+      "start": "2012-1",
+      "blocks": []
+    }
+  ]
+}

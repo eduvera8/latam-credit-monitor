@@ -1,0 +1,122 @@
+/* Monitor-specific styling. Base layout and type come from ../style.css;
+   this file adds the chart tokens and the chart furniture.
+
+   The three series hues are categorical slots 1-3 of the house palette. The dark
+   column is the same three hues restepped for the dark surface, not a flip: both
+   sets were validated against their own surface (all-pairs CVD and normal-vision
+   separation, chroma floor, lightness band). Do not hand-edit one column without
+   re-running the validator on both. */
+
+.viz-root {
+  color-scheme: light;
+  --surface-1: #fcfcfb;
+  --series-1: #2a78d6;  /* blue   - Total */
+  --series-2: #eb6834;  /* orange - Pessoa jurídica */
+  --series-3: #1baf7a;  /* aqua   - Pessoa física */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+  }
+}
+
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --surface-1: #1a1a19;
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+}
+
+/* ---------- stat tiles ---------- */
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 2rem 0 2.5rem;
+}
+
+.tile { background: var(--bg); padding: 1rem 1.1rem 1.1rem; }
+.tile .tile-label { font-family: var(--sans); font-size: .76rem; font-weight: 600;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 .5rem; }
+.tile .tile-value { font-family: var(--sans); font-size: 1.9rem; font-weight: 650;
+  line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; margin: 0; }
+.tile .tile-delta { font-family: var(--sans); font-size: .8rem; color: var(--ink-soft);
+  margin: .45rem 0 0; font-variant-numeric: tabular-nums; }
+
+/* ---------- chart blocks ---------- */
+
+.block { margin: 0 0 3rem; }
+.block > h2 { margin-bottom: .25rem; }
+.block .block-sub { font-size: .92rem; color: var(--ink-soft); margin: 0 0 .9rem; }
+
+.legend { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem 1.1rem;
+  padding: 0; margin: 0 0 .4rem; font-family: var(--sans); font-size: .82rem; color: var(--ink-soft); }
+.legend li { display: flex; align-items: center; gap: .4rem; }
+.legend .swatch { width: .7rem; height: .7rem; border-radius: 2px; flex: none; }
+
+.chart-wrap { position: relative; }
+.chart-scroll { overflow-x: auto; overflow-y: hidden; }
+.chart { display: block; width: 100%; height: auto; overflow: visible; }
+
+.chart text { font-family: var(--sans); fill: var(--ink-soft); }
+.chart .tick { font-size: 10px; font-variant-numeric: tabular-nums; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }           /* solid hairline, never dashed */
+.chart .series { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .dot-ring { fill: none; stroke: var(--bg); stroke-width: 2; }
+.chart .leader { stroke: var(--rule); stroke-width: 1; }
+.chart .endlabel { font-size: 10.5px; fill: var(--ink-soft); }     /* text wears ink tokens, not the series hue */
+.chart .endvalue { fill: var(--ink); font-weight: 650; font-variant-numeric: tabular-nums; }
+.chart .crosshair { stroke: var(--ink-soft); stroke-width: 1; opacity: .5; }
+.chart .hitbox { fill: transparent; }
+.chart .hoverdot { stroke: var(--bg); stroke-width: 2; }
+
+.tooltip {
+  position: absolute; z-index: 5; pointer-events: none; opacity: 0;
+  transition: opacity .1s ease;
+  background: var(--bg); border: 1px solid var(--rule);
+  box-shadow: 0 2px 10px rgb(0 0 0 / .1);
+  padding: .5rem .6rem; min-width: 9.5rem;
+  font-family: var(--sans); font-size: .78rem; color: var(--ink);
+}
+.tooltip[data-open="1"] { opacity: 1; }
+.tooltip .tt-date { font-weight: 650; margin: 0 0 .35rem; }
+.tooltip .tt-row { display: flex; align-items: center; gap: .4rem; margin: .12rem 0; }
+.tooltip .tt-swatch { width: .55rem; height: .55rem; border-radius: 2px; flex: none; }
+.tooltip .tt-label { color: var(--ink-soft); }
+.tooltip .tt-val { margin-left: auto; font-variant-numeric: tabular-nums; font-weight: 650; }
+
+/* ---------- table view ---------- */
+
+.table-view { margin-top: .9rem; font-family: var(--sans); font-size: .85rem; }
+.table-view summary { cursor: pointer; color: var(--ink-soft); }
+.table-view table { border-collapse: collapse; width: 100%; margin-top: .7rem; font-size: .8rem; }
+.table-view th, .table-view td { text-align: right; padding: .3rem .5rem;
+  border-bottom: 1px solid var(--rule); font-variant-numeric: tabular-nums; }
+.table-view th:first-child, .table-view td:first-child { text-align: left; }
+.table-view thead th { color: var(--ink-soft); font-weight: 600; }
+
+.sources { font-size: .84rem; color: var(--ink-soft); }
+.sources code { font-size: .95em; }
+.stale { border-left: 3px solid var(--accent); padding: .6rem .9rem; background: var(--surface);
+  font-size: .86rem; margin: 1.2rem 0; }
+
+/* On a phone the viewBox would scale the whole chart down to unreadable text.
+   Give it a floor width and let the chart - not the page - scroll sideways;
+   the table view below each chart stays the no-scroll way to read the numbers. */
+@media (max-width: 34rem) {
+  .chart { min-width: 640px; }
+  .chart .tick { font-size: 13px; }
+  /* The endpoint labels keep their size here: enlarging them pushes the longest
+     one past the viewBox. The legend above and the table below carry identity
+     and values on a phone anyway. */
+  .chart-scroll { margin-inline: -1px; }
+}
