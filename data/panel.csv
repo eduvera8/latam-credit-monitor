@@ -172,9 +172,10 @@ br,inadimplencia,level,21082,Total,%,2026-02,4.640000
 br,inadimplencia,level,21082,Total,%,2026-03,4.520000
 br,inadimplencia,level,21082,Total,%,2026-04,4.640000
 br,inadimplencia,level,21082,Total,%,2026-05,4.750000
-br,inadimplencia,level,21082,Total,%,2026-06,4.580000
+br,inadimplencia,level,21082,Total,%,2026-06,4.590000
 br,inadimplencia,level,21082,Total,%,2026-07,4.880000
-br,inadimplencia,level,21082,Total,%,2026-08,5.040000
+br,inadimplencia,level,21082,Total,%,2026-08,5.050000
+br,inadimplencia,level,21082,Total,%,2026-09,4.980000
 br,inadimplencia,level,21083,Pessoa jurídica,%,2012-01,2.220000
 br,inadimplencia,level,21083,Pessoa jurídica,%,2012-02,2.270000
 br,inadimplencia,level,21083,Pessoa jurídica,%,2012-03,2.240000
@@ -350,7 +351,8 @@ br,inadimplencia,level,21083,Pessoa jurídica,%,2026-04,3.150000
 br,inadimplencia,level,21083,Pessoa jurídica,%,2026-05,3.250000
 br,inadimplencia,level,21083,Pessoa jurídica,%,2026-06,3.180000
 br,inadimplencia,level,21083,Pessoa jurídica,%,2026-07,3.320000
-br,inadimplencia,level,21083,Pessoa jurídica,%,2026-08,3.350000
+br,inadimplencia,level,21083,Pessoa jurídica,%,2026-08,3.360000
+br,inadimplencia,level,21083,Pessoa jurídica,%,2026-09,3.280000
 br,inadimplencia,level,21084,Pessoa física,%,2012-01,5.360000
 br,inadimplencia,level,21084,Pessoa física,%,2012-02,5.400000
 br,inadimplencia,level,21084,Pessoa física,%,2012-03,5.360000
@@ -524,9 +526,10 @@ br,inadimplencia,level,21084,Pessoa física,%,2026-02,5.560000
 br,inadimplencia,level,21084,Pessoa física,%,2026-03,5.390000
 br,inadimplencia,level,21084,Pessoa física,%,2026-04,5.510000
 br,inadimplencia,level,21084,Pessoa física,%,2026-05,5.630000
-br,inadimplencia,level,21084,Pessoa física,%,2026-06,5.420000
+br,inadimplencia,level,21084,Pessoa física,%,2026-06,5.430000
 br,inadimplencia,level,21084,Pessoa física,%,2026-07,5.800000
-br,inadimplencia,level,21084,Pessoa física,%,2026-08,6.030000
+br,inadimplencia,level,21084,Pessoa física,%,2026-08,6.040000
+br,inadimplencia,level,21084,Pessoa física,%,2026-09,5.990000
 br,ajustada,derived,21082,Manchete,%,2012-01,3.660000
 br,ajustada,derived,21082,Manchete,%,2012-02,3.710000
 br,ajustada,derived,21082,Manchete,%,2012-03,3.670000
@@ -700,9 +703,10 @@ br,ajustada,derived,21082,Manchete,%,2026-02,4.640000
 br,ajustada,derived,21082,Manchete,%,2026-03,4.520000
 br,ajustada,derived,21082,Manchete,%,2026-04,4.640000
 br,ajustada,derived,21082,Manchete,%,2026-05,4.750000
-br,ajustada,derived,21082,Manchete,%,2026-06,4.580000
+br,ajustada,derived,21082,Manchete,%,2026-06,4.590000
 br,ajustada,derived,21082,Manchete,%,2026-07,4.880000
-br,ajustada,derived,21082,Manchete,%,2026-08,5.040000
+br,ajustada,derived,21082,Manchete,%,2026-08,5.050000
+br,ajustada,derived,21082,Manchete,%,2026-09,4.980000
 br,ajustada,derived,21082+20539,Ajustada,%,2013-01,4.136984
 br,ajustada,derived,21082+20539,Ajustada,%,2013-02,4.128011
 br,ajustada,derived,21082+20539,Ajustada,%,2013-03,4.044818
@@ -864,9 +868,10 @@ br,ajustada,derived,21082+20539,Ajustada,%,2026-02,5.100576
 br,ajustada,derived,21082+20539,Ajustada,%,2026-03,4.976431
 br,ajustada,derived,21082+20539,Ajustada,%,2026-04,5.085383
 br,ajustada,derived,21082+20539,Ajustada,%,2026-05,5.205338
-br,ajustada,derived,21082+20539,Ajustada,%,2026-06,5.023839
-br,ajustada,derived,21082+20539,Ajustada,%,2026-07,5.335947
-br,ajustada,derived,21082+20539,Ajustada,%,2026-08,5.503669
+br,ajustada,derived,21082+20539,Ajustada,%,2026-06,5.035099
+br,ajustada,derived,21082+20539,Ajustada,%,2026-07,5.335909
+br,ajustada,derived,21082+20539,Ajustada,%,2026-08,5.525541
+br,ajustada,derived,21082+20539,Ajustada,%,2026-09,5.409857
 br,saldo,yoy,20539,Total,%,2013-01,16.534747
 br,saldo,yoy,20539,Total,%,2013-02,16.940824
 br,saldo,yoy,20539,Total,%,2013-03,16.902255
@@ -1028,9 +1033,10 @@ br,saldo,yoy,20539,Total,%,2026-02,9.926201
 br,saldo,yoy,20539,Total,%,2026-03,10.098025
 br,saldo,yoy,20539,Total,%,2026-04,9.598777
 br,saldo,yoy,20539,Total,%,2026-05,9.586071
-br,saldo,yoy,20539,Total,%,2026-06,9.690806
-br,saldo,yoy,20539,Total,%,2026-07,9.343182
-br,saldo,yoy,20539,Total,%,2026-08,9.199777
+br,saldo,yoy,20539,Total,%,2026-06,9.697146
+br,saldo,yoy,20539,Total,%,2026-07,9.342395
+br,saldo,yoy,20539,Total,%,2026-08,9.416651
+br,saldo,yoy,20539,Total,%,2026-09,8.631672
 br,saldo,yoy,20540,Pessoa jurídica,%,2013-01,16.279216
 br,saldo,yoy,20540,Pessoa jurídica,%,2013-02,17.183250
 br,saldo,yoy,20540,Pessoa jurídica,%,2013-03,17.180861
@@ -1192,9 +1198,10 @@ br,saldo,yoy,20540,Pessoa jurídica,%,2026-02,7.239486
 br,saldo,yoy,20540,Pessoa jurídica,%,2026-03,7.576187
 br,saldo,yoy,20540,Pessoa jurídica,%,2026-04,6.884621
 br,saldo,yoy,20540,Pessoa jurídica,%,2026-05,6.927210
-br,saldo,yoy,20540,Pessoa jurídica,%,2026-06,7.965677
-br,saldo,yoy,20540,Pessoa jurídica,%,2026-07,7.261515
-br,saldo,yoy,20540,Pessoa jurídica,%,2026-08,7.117641
+br,saldo,yoy,20540,Pessoa jurídica,%,2026-06,7.970584
+br,saldo,yoy,20540,Pessoa jurídica,%,2026-07,7.257585
+br,saldo,yoy,20540,Pessoa jurídica,%,2026-08,7.289815
+br,saldo,yoy,20540,Pessoa jurídica,%,2026-09,6.549691
 br,saldo,yoy,20541,Pessoa física,%,2013-01,16.835292
 br,saldo,yoy,20541,Pessoa física,%,2013-02,16.657369
 br,saldo,yoy,20541,Pessoa física,%,2013-03,16.573207
@@ -1356,9 +1363,10 @@ br,saldo,yoy,20541,Pessoa física,%,2026-02,11.575907
 br,saldo,yoy,20541,Pessoa física,%,2026-03,11.642876
 br,saldo,yoy,20541,Pessoa física,%,2026-04,11.257291
 br,saldo,yoy,20541,Pessoa física,%,2026-05,11.215196
-br,saldo,yoy,20541,Pessoa física,%,2026-06,10.748345
-br,saldo,yoy,20541,Pessoa física,%,2026-07,10.607672
-br,saldo,yoy,20541,Pessoa física,%,2026-08,10.453669
+br,saldo,yoy,20541,Pessoa física,%,2026-06,10.755540
+br,saldo,yoy,20541,Pessoa física,%,2026-07,10.608818
+br,saldo,yoy,20541,Pessoa física,%,2026-08,10.697462
+br,saldo,yoy,20541,Pessoa física,%,2026-09,9.896530
 br,taxas,level,20714,Total,% a.a.,2012-01,26.800000
 br,taxas,level,20714,Total,% a.a.,2012-02,26.860000
 br,taxas,level,20714,Total,% a.a.,2012-03,26.540000
@@ -1534,7 +1542,8 @@ br,taxas,level,20714,Total,% a.a.,2026-04,33.360000
 br,taxas,level,20714,Total,% a.a.,2026-05,32.970000
 br,taxas,level,20714,Total,% a.a.,2026-06,32.630000
 br,taxas,level,20714,Total,% a.a.,2026-07,32.060000
-br,taxas,level,20714,Total,% a.a.,2026-08,32.260000
+br,taxas,level,20714,Total,% a.a.,2026-08,32.230000
+br,taxas,level,20714,Total,% a.a.,2026-09,32.360000
 br,taxas,level,20715,Pessoa jurídica,% a.a.,2012-01,19.060000
 br,taxas,level,20715,Pessoa jurídica,% a.a.,2012-02,18.800000
 br,taxas,level,20715,Pessoa jurídica,% a.a.,2012-03,18.490000
@@ -1709,8 +1718,9 @@ br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-03,21.120000
 br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-04,21.720000
 br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-05,21.240000
 br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-06,20.740000
-br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-07,20.810000
-br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-08,19.750000
+br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-07,20.800000
+br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-08,19.650000
+br,taxas,level,20715,Pessoa jurídica,% a.a.,2026-09,19.360000
 br,taxas,level,20716,Pessoa física,% a.a.,2012-01,34.970000
 br,taxas,level,20716,Pessoa física,% a.a.,2012-02,35.300000
 br,taxas,level,20716,Pessoa física,% a.a.,2012-03,35.010000
@@ -1886,7 +1896,8 @@ br,taxas,level,20716,Pessoa física,% a.a.,2026-04,38.930000
 br,taxas,level,20716,Pessoa física,% a.a.,2026-05,38.560000
 br,taxas,level,20716,Pessoa física,% a.a.,2026-06,38.340000
 br,taxas,level,20716,Pessoa física,% a.a.,2026-07,37.460000
-br,taxas,level,20716,Pessoa física,% a.a.,2026-08,38.180000
+br,taxas,level,20716,Pessoa física,% a.a.,2026-08,38.170000
+br,taxas,level,20716,Pessoa física,% a.a.,2026-09,38.530000
 pe,atrasada,level,PN07746EM,Bancos,%,2018-01,3.145191
 pe,atrasada,level,PN07746EM,Bancos,%,2018-02,3.261512
 pe,atrasada,level,PN07746EM,Bancos,%,2018-03,3.087842
